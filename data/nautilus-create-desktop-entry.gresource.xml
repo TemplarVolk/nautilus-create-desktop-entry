@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/nautilus/create-desktop-entry">
+    <file preprocess="xml-stripblanks">ui/create.ui</file>
+  </gresource>
+</gresources>

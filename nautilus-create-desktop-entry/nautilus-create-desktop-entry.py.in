@@ -1,0 +1,52 @@
+from gettext import textdomain, gettext as _
+from os import environ, path, access
+from sys import path as sys_path
+
+from gi import require_version
+require_version("Gtk", "3.0")
+require_version('Nautilus', '3.0')
+from gi.repository import Gtk, Nautilus, GObject, Gio
+
+
+environ["DATA_DIR"] = "@DATADIR@"
+environ["SRC_DIR"] = path.join("@DATADIR@", "src")
+environ["WINDOW_DIR"] = path.join("@DATADIR@", "src", "windows")
+
+sys_path.insert(0, environ["SRC_DIR"])
+sys_path.insert(0, environ["WINDOW_DIR"])
+
+from utils import is_executable, uri_to_path
+from create import CreateWindow
+
+
+resource = Gio.resource_load(path.join(environ["DATA_DIR"],
+                                       'nautilus-create-desktop-entry.gresource'))
+Gio.Resource._register(resource)
+
+textdomain('nautilus-create-desktop-entry')
+
+
+class NautilusCreateDesktopEntryMenuProvider(GObject.GObject, Nautilus.MenuProvider):
+    def __init__(self):
+        pass
+
+    def get_window(self, menu, file):
+        CreateWindow(self._window, file, uri_to_path(file.get_uri()))
+
+    def get_file_items(self, window, files):
+      if len(files) == 1 and is_executable(uri_to_path(files[0].get_uri())):
+
+        self._window = window
+
+        item = Nautilus.MenuItem(name='NautilusCreateDesktopEntryMenuProvider::CreateDesktopEntry',
+                                         label='Create desktop file',
+                                         tip='')
+
+        item.connect('activate', self.get_window, files[0])
+
+        return item,
+
+
+
+
+
