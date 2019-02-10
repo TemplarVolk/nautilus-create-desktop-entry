@@ -16,7 +16,7 @@ RPM packages coming soon, for now see [building](#building) to install it manual
 mkdir build && cd build
 meson .. # to install it locally use --prefix=$HOME/.local
 ninja
-sudo ninja install
+ninja install
 ```
 
 ## License
