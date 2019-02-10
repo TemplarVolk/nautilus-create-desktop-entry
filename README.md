@@ -21,4 +21,4 @@ ninja install
 
 ## License
 
-   [GPL-3.0](LICENSE.md)
+   [GPL-3.0](LICENSE)
