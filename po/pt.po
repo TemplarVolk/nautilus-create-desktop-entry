@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nautilus-create-desktop-entry\n"
-"POT-Creation-Date: 2019-02-08 09:28+0000\n"
-"PO-Revision-Date: 2019-02-08 09:42+0000\n"
+"POT-Creation-Date: 2019-02-11 11:36+0000\n"
+"PO-Revision-Date: 2019-02-11 11:38+0000\n"
 "Last-Translator: Volk\n"
 "Language-Team: \n"
 "Language: pt\n"
@@ -11,6 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2.1\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Basepath: ../data/ui\n"
 "X-Poedit-SearchPath-0: create.ui\n"
 
 #: create.ui:13
@@ -25,19 +26,23 @@ msgstr "Cancelar"
 msgid "Create"
 msgstr "Criar"
 
-#: create.ui:73
+#: create.ui:72
 msgid "Application name"
 msgstr "Nome da aplicação"
 
-#: create.ui:98
+#: create.ui:84 create.ui:137
+msgid "Required"
+msgstr "Obrigatório"
+
+#: create.ui:100
 msgid "Description"
 msgstr "Descrição"
 
-#: create.ui:124
+#: create.ui:125
 msgid "Command"
 msgstr "Comando"
 
-#: create.ui:156
+#: create.ui:157
 msgid "Icon"
 msgstr "Ícone"
 
