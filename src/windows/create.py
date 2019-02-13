@@ -59,6 +59,9 @@ class CreateWindow(GObject.GObject):
             self._named_icon_entry.set_sensitive(False)
             self._file_chooser.set_sensitive(True)
 
+    def on_named_icon_entry_changed(self, args):
+        self._named_icon_entry.set_property("primary_icon_name", self._named_icon_entry.get_text())
+
     def on_create(self, args):
         name = self._name.get_text().strip()
         f = open(path.expanduser("~/.local/share/applications/" + name + ".desktop"), "w")

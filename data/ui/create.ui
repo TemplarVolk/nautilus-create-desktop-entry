@@ -83,8 +83,6 @@
             <property name="can_focus">True</property>
             <property name="placeholder_text" translatable="yes">Required</property>
             <signal name="changed" handler="on_required_changed" swapped="no"/>
-            <signal name="delete-text" handler="on_required_changed" swapped="no"/>
-            <signal name="insert-text" handler="on_required_changed" swapped="no"/>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -165,6 +163,7 @@
               <object class="GtkEntry" id="named-icon-entry">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
+                <signal name="changed" handler="on_named_icon_entry_changed" swapped="no"/>
               </object>
               <packing>
                 <property name="left_attach">1</property>
