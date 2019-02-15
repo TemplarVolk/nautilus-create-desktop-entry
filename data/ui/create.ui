@@ -2,6 +2,18 @@
 <!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
+  <object class="GtkFileFilter" id="image-filter">
+    <mime-types>
+      <mime-type>image/png</mime-type>
+      <mime-type>image/jpeg</mime-type>
+      <mime-type>image/vnd.microsoft.icon</mime-type>
+    </mime-types>
+    <patterns>
+      <pattern>*.png</pattern>
+      <pattern>*.jpg</pattern>
+      <pattern>*.ico</pattern>
+    </patterns>
+  </object>
   <object class="GtkDialog" id="window">
     <property name="can_focus">False</property>
     <property name="resizable">False</property>
@@ -175,6 +187,8 @@
                 <property name="visible">True</property>
                 <property name="sensitive">False</property>
                 <property name="can_focus">False</property>
+                <property name="create_folders">False</property>
+                <property name="filter">image-filter</property>
                 <property name="title" translatable="yes"/>
               </object>
               <packing>
