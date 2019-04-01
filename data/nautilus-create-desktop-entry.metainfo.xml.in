@@ -8,11 +8,11 @@
   <name>Nautilus Create Desktop Entry</name>
   <summary>Nautilus extension that adds an option to create a desktop entry on the submenu of executable files</summary>
   <description>
-    <p>Nautilus extension thatgit add adds an option to create a desktop entry on the submenu of executable files</p>
+    <p>Nautilus extension that add adds an option to create a desktop entry on the submenu of executable files</p>
   </description>
   <developer_name>Volk</developer_name>
-  <url type="homepage">https://github.com/TemplarVolk/nautilus-create-desktop-entry</url>
-  <url type="bugtracker">https://github.com/TemplarVolk/nautilus-create-desktop-entry/issues</url>
+  <url type="homepage">https://github.com/luaVolk/nautilus-create-desktop-entry</url>
+  <url type="bugtracker">https://github.com/luaVolk/nautilus-create-desktop-entry/issues</url>
 ​</component>
 
 
